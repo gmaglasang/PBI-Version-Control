@@ -1,6 +1,7 @@
 table 'Time Periods'
 	lineageTag: fdbe931b-8558-4713-8210-2f2a6d29a798
 
+	/// Returns 1 if a calendar date falls within the range defined by the selected Time Period slicer option (Last 12 Months, Q1 2025, Q4 2024, Custom Range); used as a visual-level filter to scope all metrics to the chosen period.
 	measure 'Date Filter' = ```
 			
 			VAR SelectedPeriod = SELECTEDVALUE('Time Periods'[Period])
