@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "d486009cf685200659ed",
+  "name": "f5375165e2e571a9d999",
   "position": {
     "x": 10.53356282271945,
-    "y": 107.19449225473322,
-    "z": 6000,
-    "height": 182.16867469879517,
+    "y": 304.23407917383821,
+    "z": 18000,
+    "height": 218.72633390705678,
     "width": 151.18760757314973,
-    "tabOrder": 6000
+    "tabOrder": 11000
   },
   "visual": {
     "visualType": "listSlicer",
@@ -23,11 +23,11 @@
                       "Entity": "QualitestData"
                     }
                   },
-                  "Property": "Region"
+                  "Property": "Industry"
                 }
               },
-              "queryRef": "QualitestData.Region",
-              "nativeQueryRef": "Region",
+              "queryRef": "QualitestData.Industry",
+              "nativeQueryRef": "Industry",
               "active": true
             }
           ]
@@ -37,62 +37,13 @@
     "objects": {
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "q",
-                    "Entity": "QualitestData",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "q"
-                                }
-                              },
-                              "Property": "Region"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'North America'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "selection": [
         {
           "properties": {
             "selectAllCheckboxEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "strictSingleSelect": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -123,13 +74,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "maxTiles": {
-              "expr": {
-                "Literal": {
-                  "Value": "6L"
                 }
               }
             }
@@ -169,6 +113,22 @@
             }
           },
           "selector": {
+            "id": "default",
+            "hierarchyMatching": 1
+          }
+        },
+        {
+          "properties": {
+            "showIconByState": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "QualitestData.Industry",
             "id": "default",
             "hierarchyMatching": 1
           }
@@ -221,13 +181,6 @@
         },
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "lineColor": {
               "solid": {
                 "color": {
@@ -499,13 +452,6 @@
                 }
               }
             },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
@@ -588,10 +534,10 @@
                 }
               }
             },
-            "position": {
+            "width": {
               "expr": {
                 "Literal": {
-                  "Value": "'Bottom'"
+                  "Value": "3D"
                 }
               }
             },
@@ -607,10 +553,10 @@
                 }
               }
             },
-            "width": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "3D"
+                  "Value": "'Bottom'"
                 }
               }
             }
@@ -650,7 +596,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "Region",
+      "groupName": "Industry",
       "fieldChanges": true,
       "filterChanges": true
     },

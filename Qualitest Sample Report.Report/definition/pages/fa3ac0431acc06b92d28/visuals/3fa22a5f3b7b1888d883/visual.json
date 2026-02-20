@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.5.0/schema.json",
-  "name": "d486009cf685200659ed",
+  "name": "3fa22a5f3b7b1888d883",
   "position": {
     "x": 10.53356282271945,
-    "y": 107.19449225473322,
-    "z": 6000,
-    "height": 182.16867469879517,
+    "y": 527.29776247848531,
+    "z": 20000,
+    "height": 184.02753872633392,
     "width": 151.18760757314973,
-    "tabOrder": 6000
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "listSlicer",
@@ -23,76 +23,44 @@
                       "Entity": "QualitestData"
                     }
                   },
-                  "Property": "Region"
+                  "Property": "ServiceType"
                 }
               },
-              "queryRef": "QualitestData.Region",
-              "nativeQueryRef": "Region",
+              "queryRef": "QualitestData.ServiceType",
+              "nativeQueryRef": "ServiceType",
               "active": true
             }
           ]
         }
       }
     },
+    "expansionStates": [
+      {
+        "roles": [
+          "Values"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "QualitestData.ServiceType"
+            ],
+            "isCollapsed": true,
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
     "objects": {
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "q",
-                    "Entity": "QualitestData",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "In": {
-                        "Expressions": [
-                          {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "q"
-                                }
-                              },
-                              "Property": "Region"
-                            }
-                          }
-                        ],
-                        "Values": [
-                          [
-                            {
-                              "Literal": {
-                                "Value": "'North America'"
-                              }
-                            }
-                          ]
-                        ]
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ],
       "selection": [
         {
           "properties": {
             "selectAllCheckboxEnabled": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "strictSingleSelect": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -123,13 +91,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "maxTiles": {
-              "expr": {
-                "Literal": {
-                  "Value": "6L"
                 }
               }
             }
@@ -221,13 +182,6 @@
         },
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "lineColor": {
               "solid": {
                 "color": {
@@ -251,6 +205,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "weight": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
                 }
               }
             },
@@ -447,13 +408,6 @@
                 }
               }
             },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
@@ -487,25 +441,6 @@
         },
         {
           "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
@@ -613,6 +548,13 @@
                   "Value": "3D"
                 }
               }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
             }
           },
           "selector": {
@@ -650,7 +592,7 @@
       ]
     },
     "syncGroup": {
-      "groupName": "Region",
+      "groupName": "ServiceType",
       "fieldChanges": true,
       "filterChanges": true
     },
